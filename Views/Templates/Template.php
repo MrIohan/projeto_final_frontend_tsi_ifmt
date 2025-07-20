@@ -1,6 +1,6 @@
 <?php
 
-require_once "/projetos/faculdade/semestre1_frontend/Atividades/Autoload.php";
+require_once "/projeto_final_frontend_tsi_ifmt/Autoload.php";
 
 class template
 {

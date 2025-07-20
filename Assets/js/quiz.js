@@ -1,10 +1,8 @@
-// --- 1. ELEMENTOS DO DOM ---
+
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
-// --- 2. DADOS DO QUIZ ---
-// Array de objetos, cada objeto é uma pergunta
 const questions = [
     {
         question: "Qual a capital do Brasil?",
@@ -48,27 +46,24 @@ const questions = [
     }
 ];
 
-// --- 3. ESTADO DO QUIZ ---
+
 let currentQuestionIndex = 0;
 
-// --- 4. FUNÇÕES ---
 
-// Função para iniciar ou reiniciar o quiz
 function startQuiz() {
     currentQuestionIndex = 0;
-    nextButton.classList.add("hide"); // Esconde o botão "Próxima"
+    nextButton.classList.add("hide"); 
     nextButton.innerHTML = "Próxima";
     showQuestion();
 }
 
-// Função para exibir a pergunta atual
+
 function showQuestion() {
-    resetState(); // Limpa o estado anterior
+    resetState(); 
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-    // Cria e exibe os botões de resposta
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
@@ -81,7 +76,7 @@ function showQuestion() {
     });
 }
 
-// Função para limpar os botões e classes de feedback
+
 function resetState() {
     nextButton.classList.add("hide");
     while (answerButtonsElement.firstChild) {
@@ -89,28 +84,23 @@ function resetState() {
     }
 }
 
-// Função chamada quando uma resposta é selecionada
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
 
     if (isCorrect) {
-        // Se a resposta está correta
+
         selectedBtn.classList.add("correct");
         if (questions.length > currentQuestionIndex + 1) {
-            // Se ainda há perguntas, mostra o botão "Próxima"
             nextButton.classList.remove("hide");
         } else {
-            // Se for a última pergunta
             questionElement.innerHTML = `Parabéns! Você completou o Quiz!`;
             nextButton.innerHTML = "Jogar Novamente";
             nextButton.classList.remove("hide");
         }
     } else {
-        // Se a resposta está errada
         selectedBtn.classList.add("incorrect");
         questionElement.innerHTML = `Você errou! O quiz será reiniciado.`;
-        // Mostra qual era a resposta correta
         Array.from(answerButtonsElement.children).forEach(button => {
             if (button.dataset.correct === "true") {
                 button.classList.add("correct");
@@ -120,13 +110,12 @@ function selectAnswer(e) {
         nextButton.classList.remove("hide");
     }
 
-    // Desabilita todos os botões após uma resposta
     Array.from(answerButtonsElement.children).forEach(button => {
         button.disabled = true;
     });
 }
 
-// Função para o botão "Próxima" / "Reiniciar"
+
 function handleNextButton() {
     if(nextButton.innerHTML === "Reiniciar" || nextButton.innerHTML === "Jogar Novamente") {
         startQuiz();
@@ -140,8 +129,6 @@ function handleNextButton() {
 }
 
 
-// --- 5. EVENT LISTENERS ---
 nextButton.addEventListener("click", handleNextButton);
 
-// Inicia o quiz quando a página carrega
 startQuiz();
