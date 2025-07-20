@@ -1,0 +1,62 @@
+.container{
+    margin: 50px !important;
+}
+
+.main-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none; */
+}
+
+.main-box div {
+    padding: 10px;
+}
+
+.main-txt  article {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    border: 1px ridge white;
+    padding: 20px;
+}
+    
+.main-img {
+    height: 310px;
+    position: sticky;
+    top:0;
+}
+
+.main-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 60%;
+    border: 1px ridge white;
+    animation: moverComScroll cubic-bezier(.06,1.58,0,.7);
+    animation-timeline: scroll(root); 
+
+}
+
+.img02 img{
+    margin-top: 0px !important;
+}
+
+
+
+
+@keyframes moverComScroll {
+    from {
+        margin-top: 0px;
+    }
+    to {
+        margin-top: 90px; 
+    }
+}
+
+@keyframes progresso {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}

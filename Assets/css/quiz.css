@@ -1,0 +1,78 @@
+
+/* Contêiner do Quiz */
+.quiz-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: "Libertinus Mono", monospace;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Contêiner dos Botões de Resposta */
+.btn-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna para os botões */
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Estilo Padrão dos Botões */
+.btn {
+    background-color: #34495e;
+    border: none;
+    color: var(--cor03);
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9   ;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Classe para feedback de resposta correta */
+.btn.correct {
+    background-color: var(--cor04);
+}
+
+/* Classe para feedback de resposta incorreta */
+.btn.incorrect {
+    background-color: crimson;
+}
+
+/* Estilo do Botão "Próxima" */
+.next-btn {
+    background-color: #3498db;
+    width: 50%;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    background-color: #34495e;
+    color: var(--cor03);
+}
+
+.next-btn:hover {
+    background-color: #3498db;
+    color: var(--cor03);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Classe para esconder elementos */
+.hide {
+    display: none;
+}

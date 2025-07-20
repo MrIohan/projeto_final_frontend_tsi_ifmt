@@ -1,0 +1,15 @@
+.box-poema{
+    width: 40%;
+    padding: 50px 50px 50px 50px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.poema article {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.poema01 article {
+    margin-top: 0px !important;
+}
