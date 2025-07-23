@@ -1,9 +1,7 @@
 RewriteEngine On
 
-# NOVA REGRA: Se a URL começar com "Assets/", não faça mais nada e sirva o arquivo.
 RewriteRule ^Assets/ - [L]
 
-# Suas regras existentes para as páginas
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
