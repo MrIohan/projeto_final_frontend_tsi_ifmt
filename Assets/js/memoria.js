@@ -10,7 +10,7 @@ const playAgainBtn = document.getElementById('play-again-btn');
 // --- 2. DADOS E ESTADO DO JOGO ---
 
 // CORREÇÃO 1: Renomeamos a variável e usamos apenas nomes de arquivos de imagem.
-const cardImages = ['Jessey', 'Yukiko', 'Dart', 'Luvinhas', 'Rycker', 'Kiba'];
+const cardImages = ['jessey', 'yukiko', 'dart', 'luvinhas', 'rycker', 'kiba'];
 let gameCards = [];
 
 let flippedCards = [];
