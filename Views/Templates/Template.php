@@ -14,7 +14,7 @@ class template
             $cont = 1;
         }
 
-        $html = __DIR__ . DIRECTORY_SEPARATOR . "header.php";
+        $html = __DIR__ . DIRECTORY_SEPARATOR . "header.html";
 
         // helpers::dd($html);
         if (file_exists($html)) {
@@ -87,7 +87,7 @@ class template
 
     static function footer()
     {
-        $html = __DIR__ . DIRECTORY_SEPARATOR . "footer.php";
+        $html = __DIR__ . DIRECTORY_SEPARATOR . "footer.html";
 
         if (file_exists($html))
         {
