@@ -45,7 +45,7 @@ function createBoard() {
         <div class="card-face card-back"></div>
         <div class="card-face card-front">
             <div class="img">
-                <img src="/Assets/img/${imageName}.png" alt="Carta do Jogo">
+                <img src="Assets/img/${imageName}.png" alt="Carta do Jogo">
             </div>
             <div class="text">
                 <p class="img-text">${imageName}</p>
