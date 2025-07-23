@@ -1,7 +1,7 @@
 
     <div class="main-box box01">
         <div class="main-img img01">
-            <img src="/Assets/img/luvinhas.png">
+            <img src="/Assets/img/lukinhas.png">
         </div>
         <div id="Lukas" class="main-txt txt01">
             <article>
