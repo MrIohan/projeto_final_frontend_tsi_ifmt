@@ -10,7 +10,7 @@ const playAgainBtn = document.getElementById('play-again-btn');
 // --- 2. DADOS E ESTADO DO JOGO ---
 
 // CORREÇÃO 1: Renomeamos a variável e usamos apenas nomes de arquivos de imagem.
-const cardImages = ['jessey.png', 'yukiko.png', 'dart.png', 'luvinhas.png', 'rycker.png', 'kiba.png'];
+const cardImages = ['Jessey', 'Yukiko', 'Dart', 'Luvinhas', 'Rycker', 'Kiba'];
 let gameCards = [];
 
 let flippedCards = [];
@@ -44,7 +44,13 @@ function createBoard() {
         card.innerHTML = `
         <div class="card-face card-back"></div>
         <div class="card-face card-front">
-            <img src="/Assets/img/${imageName}" alt="Carta do Jogo">
+            <div class="img">
+                <img src="/Assets/img/${imageName}.png" alt="Carta do Jogo">
+            </div>
+            <div class="text">
+                <p class="img-text">${imageName}</p>
+            </div>
+
         </div>
     `;
 
