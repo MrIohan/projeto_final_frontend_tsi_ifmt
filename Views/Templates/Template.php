@@ -1,13 +1,13 @@
 <?php
 
-require_once "/projeto_final_frontend_tsi_ifmt/Autoload.php";
+require_once __DIR__ . '/../../Autoload.php';
 
 class template
 {
     static function header($conteudo)
     {
         $cont = 0;
-        
+
         if ($conteudo == "/")
         {
             $conteudo = "Home";
