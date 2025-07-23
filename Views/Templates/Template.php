@@ -10,7 +10,7 @@ class template
 
         if ($conteudo == "/")
         {
-            $conteudo = "Home";
+            $conteudo = "home";
             $cont = 1;
         }
 
@@ -26,7 +26,7 @@ class template
                 case 1:
                     $html = str_replace('/@CONTEUDO@', "/".$conteudo, $html);
                     $conteudo = str_replace('/', '', $conteudo);
-                    $html = str_replace('@TITULO@', $conteudo, $html);
+                    $html = str_replace('@TITULO@', 'Home', $html);
                     break;
 
                 default:
