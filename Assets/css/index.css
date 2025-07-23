@@ -57,6 +57,101 @@ header {
     text-decoration: none;
     color: var(--cor01);
 }
+
+.header-01 a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-01 li {
+    list-style: none;
+}
+
+.header-01 .item01{
+    margin-top: 20px !important;
+}
+
+/* --- Estilos da Barra de Navegação --- */
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Essencial para posicionar o menu dropdown */
+}
+
+.nav-branding {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* --- Ícone Hamburger (Sempre Visível) --- */
+.hamburger-menu {
+    display: block; /* Sempre visível */
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animação do Hamburger para "X" */
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Menu Dropdown (Escondido por Padrão) --- */
+.nav-menu {
+    position: absolute;
+    top: 0px;  /* Aparece logo abaixo da navbar */
+    right: 0;   /* Alinhado à direita */
+    
+    background-color: #2d3436;
+    width: 250px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    margin-right: 200px;
+    
+    /* Lógica para esconder o menu */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); /* Efeito de leve subida */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.nav-item {
+    padding: 1rem 1.5rem;
+}
+
+.nav-link {
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #81ecec;
+}
+
+/* A CLASSE MÁGICA: Faz o menu aparecer */
+.nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .header-02{
     width: 100%;
     background-color: var(--cor01);
@@ -124,3 +219,4 @@ footer{
     color: red;
     position: absolute;
 }
+

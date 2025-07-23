@@ -20,16 +20,38 @@
             <div>
                 <h1><a href="/">Contos Antigos</a></h1>
             </div>
+
             <div>
-                <a>Menu</a>
+
+                    <ul class="nav-menu">
+                        <li class="nav-item item01">
+                            <a href="/poemas">Contos e Literaturas</a>
+                        </li>
+                        <li class="nav-item item02">
+                            <a href="/tcc">Apresentações</a>
+                        </li>
+                        <li class="nav-item item02">
+                            <a href="/quiz">Quiz Antigo</a>
+                        </li>
+                        <li class="nav-item item02">
+                            <a href="/memoria">Memoria de Mestre</a>
+                        </li>
+                    </ul>
+
+                    <button class="hamburger-menu">
+                        <span class="bar bar01"></span>
+                        <span class="bar bar02"></span>
+                        <span class="bar bar03"></span>
+                    </button>
+
             </div>
         </div>
-        <div class="header-02">
+        <div class='header-02'>
             <nav>
                 <ul>
-                    <li><a href="/poemas">Contos e Literaturas</a></li>
-                    <li><a href="/tcc">Apresentações</a></li>
-                    <li><a href="/quiz">Quiz Antigo</a></li>
+                    <li><a href='#Lukas'>Lukas</a></li>
+                    <li><a href='#Grack '>Grack</a></li>
+                    <li><a href='#Fantasma'>Fantasma</a></li>
                 </ul>
             </nav>
         </div>

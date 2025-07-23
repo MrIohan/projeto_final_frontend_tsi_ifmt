@@ -6,23 +6,49 @@ class template
 {
     static function header($conteudo)
     {
-
+        $cont = 0;
+        
         if ($conteudo == "/")
         {
             $conteudo = "Home";
+            $cont = 1;
         }
 
         $html = __DIR__ . DIRECTORY_SEPARATOR . "header.php";
 
         // helpers::dd($html);
         if (file_exists($html)) {
+
             $html = file_get_contents($html);
 
-            $html = str_replace('/@CONTEUDO@', "/".$conteudo, $html);
-            $conteudo = str_replace('/', '', $conteudo);
-            $html = str_replace('@TITULO@', $conteudo, $html);
+            switch ($cont){
+
+                case 1:
+                    $html = str_replace('/@CONTEUDO@', "/".$conteudo, $html);
+                    $conteudo = str_replace('/', '', $conteudo);
+                    $html = str_replace('@TITULO@', $conteudo, $html);
+                    break;
+
+                default:
+                    $html = str_replace('/@CONTEUDO@', "/".$conteudo, $html);
+                    $conteudo = str_replace('/', '', $conteudo);
+                    $html = str_replace('@TITULO@', $conteudo, $html);
+
+                    $limpa = "<div class='header-02'>
+            <nav>
+                <ul>
+                    <li><a href='#Lukas'>Lukas</a></li>
+                    <li><a href='#Grack '>Grack</a></li>
+                    <li><a href='#Fantasma'>Fantasma</a></li>
+                </ul>
+            </nav>
+        </div>";
+                    $html = str_replace($limpa, "", $html);
+                    break;
+            }
 
             echo $html;
+
         } else {
             echo "Deu ruim zé";
         }

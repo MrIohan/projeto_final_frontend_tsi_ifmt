@@ -3,7 +3,7 @@
         <div class="main-img img01">
             <img src="/Assets/img/luvinhas.png">
         </div>
-        <div class="main-txt txt01">
+        <div id="Lukas" class="main-txt txt01">
             <article>
                 <p>
                     Olá, bem vindos ao breve resumo da minha criação e de como ela é feita, o Contos Antigos.
@@ -54,7 +54,7 @@
     </div>
 
     <div class="main-box box02">
-        <div class="main-txt txt02">
+        <div id="Grack" class="main-txt txt02">
             <article>
                 <p>
                     O contos é o rpg de mesa virtual mais sólido q eu já joguei. Eu tive uma campanha presencial que durou uns bons meses, talvez mais de ano, mas já faz muito tempo, e era completamente diferente jogar presencial, o foco era outro, mt mais em combate e no micro do que no macro que é o Contos, com tantos reinos e personagens e possibilidades diferentes, pelo tanto de esforço que o Lukas colocou nele.
@@ -74,7 +74,7 @@
         <div class="main-img img03">
             <img src="/Assets/img/fantasma.png" alt=""> 
         </div>
-        <div class="main-txt text03">
+        <div id="Fantasma" class="main-txt text03">
             <article>
                 <p>
                     Contos antigos - O ritual antropofágico.
