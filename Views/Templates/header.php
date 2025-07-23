@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="../../Assets/css/@CONTEUDO@.css">
     <link rel="icon" type="image/png" href="/Assets/img/icon.png">
     <title>@TITULO@</title>
-
+    
     <script>
         const BASE_URL = "<?php echo BASE_URL; ?>";
     </script>
+
 </head>
 
 <body>
